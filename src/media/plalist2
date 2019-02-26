@@ -1,0 +1,43 @@
+* function Playlist(props){  
+        const general=props.data.categories
+        console.log(general)
+        return(
+            <div>
+            {
+                general.map((item)=>{
+                    return(
+                        <div  className="Playlist">
+                        <Figure.Play
+                        size={40}
+                        color="yellow"
+                        />
+                        <Figure.Pause
+                        size={40}
+                        color="red"
+                        />
+                        <Figure.Full
+                        size={40}
+                        color="green"
+                        />
+                        <Figure.Volumen
+                        size={40}
+                        color="blue"
+                        />
+                            <h3>{item.title}</h3>
+                            {item.playlist.map((playlist)=>
+                                <Media {...playlist}
+                                key={playlist.id}
+                                />
+                                )}
+                        </div>
+                    )
+              
+           
+            })
+            
+           }
+               <Home/> 
+            </div>
+        )
+    
+}  */
